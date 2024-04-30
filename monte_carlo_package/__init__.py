@@ -2,6 +2,6 @@
 
 # Add imports here
 from .monte_carlo_package import *
-
-
+from .bitstring import *
+from .IsingHamiltonian import *
 from ._version import __version__
