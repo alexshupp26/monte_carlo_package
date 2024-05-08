@@ -5,3 +5,4 @@ API Documentation
    :toctree: autosummary
 
    monte_carlo_package.canvas
+   

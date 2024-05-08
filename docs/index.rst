@@ -65,9 +65,9 @@ Welcome to monte_carlo_package's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
-   :titlesonly:
+   :caption: Contents:
 
+   modules
    getting_started
    user_guide
    api
