@@ -152,3 +152,26 @@ class IsingHamiltonian:
         HC = (EE - E * E) / (T * T)
         MS = (MM - M * M) / T
         return E, M, HC, MS
+    
+    def get_lowest_energy_config(self):
+        """Compute the lowest energy Bitstring configuration
+
+        Returns
+        -------
+        emin  : float
+            Minimum Energy
+        xmin  : list[int]
+            Minimum Energy Configuration
+        """
+        xmin = None # configuration of minimum energy configuration
+        emin = 0 # minimum of energy
+        my_bs = BitString(self.N)
+        xmin = BitString(self.N)
+        # Add code here to find the lowest energy configuration
+
+        for a in range(0,2**len(my_bs)):
+            my_bs.set_int_config(a) 
+            if (self.energy(my_bs) < self.energy(xmin)):
+                xmin.set_int_config(a)
+                emin = self.energy(xmin)
+        return emin, xmin
